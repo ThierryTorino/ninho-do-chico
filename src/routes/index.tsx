@@ -102,14 +102,11 @@ function Index() {
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground">
               <Bird className="h-5 w-5" />
             </div>
-            <div className="leading-tight">
-              <p className="text-lg font-semibold">Ninho do Chico</p>
-              <p className="text-xs text-muted-foreground">Ring Necks & Calopsitas</p>
-            </div>
+            <p className="text-xl font-extrabold tracking-tight">Ninho do Chico</p>
           </div>
           <nav className="hidden gap-6 text-sm text-muted-foreground md:flex">
             <a href="#aves" className="hover:text-primary">Aves</a>
