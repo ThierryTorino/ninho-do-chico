@@ -213,8 +213,8 @@ function Index() {
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-2 md:items-center">
           <div className="aspect-video overflow-hidden rounded-3xl border border-border">
             <img
-              src={ringNeckAmarelo}
-              alt="Ring Neck amarelo"
+              src="https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=1200&q=80"
+              alt="Aves no viveiro"
               className="h-full w-full object-cover"
             />
           </div>
@@ -230,10 +230,10 @@ function Index() {
                 <Leaf className="h-4 w-4 text-primary" /> Aves anilhadas e legalizadas
               </li>
               <li className="flex items-center gap-3">
-                <Leaf className="h-4 w-4 text-primary" /> Garantia de saúde de 30 dias
+                <Leaf className="h-4 w-4 text-primary" /> Alimentação natural e balanceada
               </li>
               <li className="flex items-center gap-3">
-                <Leaf className="h-4 w-4 text-primary" /> Suporte para iniciantes
+                <Leaf className="h-4 w-4 text-primary" /> Entrega em mãos na região
               </li>
             </ul>
           </div>
