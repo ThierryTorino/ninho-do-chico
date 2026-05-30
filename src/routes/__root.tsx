@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "ninho-do-chico" },
+      { name: "description", content: "Ninho do Chico Birds is a website showcasing bird species with detailed information and direct purchase options." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "ninho-do-chico" },
+      { property: "og:description", content: "Ninho do Chico Birds is a website showcasing bird species with detailed information and direct purchase options." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "ninho-do-chico" },
+      { name: "twitter:description", content: "Ninho do Chico Birds is a website showcasing bird species with detailed information and direct purchase options." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/04dd1d44-8d32-40c0-9f16-02c71db13afc/id-preview-efa0a838--3ac8e0b8-950b-4e79-b7e2-bebce1de2b7f.lovable.app-1780158662675.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/04dd1d44-8d32-40c0-9f16-02c71db13afc/id-preview-efa0a838--3ac8e0b8-950b-4e79-b7e2-bebce1de2b7f.lovable.app-1780158662675.png" },
     ],
     links: [
       {
