@@ -274,11 +274,11 @@ function Index() {
         <DialogContent className="max-w-3xl overflow-hidden p-0">
           {selected && (
             <>
-              <div className="aspect-[4/3] w-full overflow-hidden bg-muted sm:aspect-[16/10]">
+              <div className="flex max-h-[60vh] w-full items-center justify-center overflow-hidden bg-secondary">
                 <img
                   src={selected.image}
                   alt={selected.name}
-                  className="h-full w-full object-cover"
+                  className="max-h-[60vh] w-full object-contain"
                 />
               </div>
               <div className="p-6">
