@@ -102,14 +102,11 @@ function Index() {
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground">
               <Bird className="h-5 w-5" />
             </div>
-            <div className="leading-tight">
-              <p className="text-lg font-semibold">Ninho do Chico</p>
-              <p className="text-xs text-muted-foreground">Ring Necks & Calopsitas</p>
-            </div>
+            <p className="text-xl font-extrabold tracking-tight">Ninho do Chico</p>
           </div>
           <nav className="hidden gap-6 text-sm text-muted-foreground md:flex">
             <a href="#aves" className="hover:text-primary">Aves</a>
@@ -157,8 +154,8 @@ function Index() {
           <div className="relative">
             <div className="aspect-square overflow-hidden rounded-3xl border border-border shadow-xl">
               <img
-                src={ringNeckVerde}
-                alt="Ring Neck verde no galho"
+                src="https://images.unsplash.com/photo-1555169062-013468b47731?auto=format&fit=crop&w=1200&q=80"
+                alt="Ave colorida em galho"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -216,8 +213,8 @@ function Index() {
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-2 md:items-center">
           <div className="aspect-video overflow-hidden rounded-3xl border border-border">
             <img
-              src={ringNeckAmarelo}
-              alt="Ring Neck amarelo"
+              src="https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=1200&q=80"
+              alt="Aves no viveiro"
               className="h-full w-full object-cover"
             />
           </div>
@@ -233,10 +230,10 @@ function Index() {
                 <Leaf className="h-4 w-4 text-primary" /> Aves anilhadas e legalizadas
               </li>
               <li className="flex items-center gap-3">
-                <Leaf className="h-4 w-4 text-primary" /> Garantia de saúde de 30 dias
+                <Leaf className="h-4 w-4 text-primary" /> Alimentação natural e balanceada
               </li>
               <li className="flex items-center gap-3">
-                <Leaf className="h-4 w-4 text-primary" /> Suporte para iniciantes
+                <Leaf className="h-4 w-4 text-primary" /> Entrega em mãos na região
               </li>
             </ul>
           </div>
@@ -260,7 +257,7 @@ function Index() {
             <Phone className="h-4 w-4" /> {WHATSAPP_DISPLAY}
           </span>
           <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-            <MapPin className="h-4 w-4" /> Interior de SP
+            <MapPin className="h-4 w-4" /> Ribeirão Preto - SP
           </span>
         </div>
       </section>
@@ -277,11 +274,11 @@ function Index() {
         <DialogContent className="max-w-3xl overflow-hidden p-0">
           {selected && (
             <>
-              <div className="aspect-[4/3] w-full overflow-hidden bg-muted sm:aspect-[16/10]">
+              <div className="flex max-h-[60vh] w-full items-center justify-center overflow-hidden bg-secondary">
                 <img
                   src={selected.image}
                   alt={selected.name}
-                  className="h-full w-full object-cover"
+                  className="max-h-[60vh] w-full object-contain"
                 />
               </div>
               <div className="p-6">
