@@ -257,7 +257,7 @@ function Index() {
             <Phone className="h-4 w-4" /> {WHATSAPP_DISPLAY}
           </span>
           <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-            <MapPin className="h-4 w-4" /> Interior de SP
+            <MapPin className="h-4 w-4" /> Ribeirão Preto - SP
           </span>
         </div>
       </section>
