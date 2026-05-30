@@ -9,34 +9,38 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
+import ringNeckVerde from "@/assets/ring-neck-verde.jpg";
+import ringNeckAzul from "@/assets/ring-neck-azul.jpg";
+import ringNeckAmarelo from "@/assets/ring-neck-amarelo.jpg";
+import calopsita from "@/assets/calopsita.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ninho do Chico — Criação de aves ornamentais" },
+      { title: "Ninho do Chico — Criação de aves" },
       {
         name: "description",
         content:
-          "Ninho do Chico: criação responsável de aves ornamentais. Conheça nossas espécies e adquira a sua pelo WhatsApp.",
+          "Ninho do Chico: conheça nossos Ring Necks e Calopsitas e adquira a sua ave pelo WhatsApp.",
       },
       { property: "og:title", content: "Ninho do Chico" },
       {
         property: "og:description",
-        content: "Criação responsável de aves ornamentais.",
+        content: "Criação responsável de Ring Necks e Calopsitas.",
       },
     ],
   }),
   component: Index,
 });
 
-const WHATSAPP = "5511999999999";
+const WHATSAPP = "5516991993911";
+const WHATSAPP_DISPLAY = "(16) 99199-3911";
 
 type BirdItem = {
   name: string;
   scientific: string;
   price: string;
   image: string;
-  origin: string;
   size: string;
   diet: string;
   description: string;
@@ -44,76 +48,44 @@ type BirdItem = {
 
 const birds: BirdItem[] = [
   {
-    name: "Canário-belga",
-    scientific: "Serinus canaria domestica",
-    price: "R$ 350",
-    image:
-      "https://images.unsplash.com/photo-1555169062-013468b47731?auto=format&fit=crop&w=900&q=80",
-    origin: "Bélgica",
-    size: "14 cm",
-    diet: "Sementes e frutas",
+    name: "Ring Neck Verde",
+    scientific: "Psittacula krameri",
+    price: "R$ 1.200",
+    image: ringNeckVerde,
+    size: "40 cm",
+    diet: "Sementes, frutas e legumes",
     description:
-      "Conhecido pelo canto melodioso e penas amareladas vibrantes, é uma das aves mais queridas para criação doméstica.",
+      "O Ring Neck verde é a coloração clássica da espécie. Inteligente, sociável e capaz de aprender a falar, é uma das aves mais procuradas para companhia.",
+  },
+  {
+    name: "Ring Neck Azul",
+    scientific: "Psittacula krameri",
+    price: "R$ 1.800",
+    image: ringNeckAzul,
+    size: "40 cm",
+    diet: "Sementes, frutas e legumes",
+    description:
+      "Mutação azul do Ring Neck, com plumagem suave e elegante. Mesma personalidade brincalhona e curiosa do tradicional, com um visual exclusivo.",
+  },
+  {
+    name: "Ring Neck Amarelo",
+    scientific: "Psittacula krameri",
+    price: "R$ 2.000",
+    image: ringNeckAmarelo,
+    size: "40 cm",
+    diet: "Sementes, frutas e legumes",
+    description:
+      "Conhecido como Lutino, o Ring Neck amarelo encanta pela cor vibrante. Dócil quando bem socializado e ótimo companheiro do dia a dia.",
   },
   {
     name: "Calopsita",
     scientific: "Nymphicus hollandicus",
     price: "R$ 280",
-    image:
-      "https://images.unsplash.com/photo-1591608971362-f08b2a75731a?auto=format&fit=crop&w=900&q=80",
-    origin: "Austrália",
+    image: calopsita,
     size: "32 cm",
     diet: "Sementes, frutas e legumes",
     description:
-      "Dócil, sociável e fácil de domesticar. Aprende a assobiar músicas e imitar pequenos sons.",
-  },
-  {
-    name: "Periquito Australiano",
-    scientific: "Melopsittacus undulatus",
-    price: "R$ 90",
-    image:
-      "https://images.unsplash.com/photo-1606225838393-fa92ed742fcc?auto=format&fit=crop&w=900&q=80",
-    origin: "Austrália",
-    size: "18 cm",
-    diet: "Sementes e folhas verdes",
-    description:
-      "Colorido e ativo, ótimo para iniciantes. Vive bem em casal e tem grande variedade de cores.",
-  },
-  {
-    name: "Diamante-mandarim",
-    scientific: "Taeniopygia guttata",
-    price: "R$ 120",
-    image:
-      "https://images.unsplash.com/photo-1591608971362-f08b2a75731a?auto=format&fit=crop&w=900&q=80",
-    origin: "Austrália",
-    size: "10 cm",
-    diet: "Sementes pequenas",
-    description:
-      "Pequeno, alegre e de canto suave. Ideal para viveiros comunitários com outras aves pacíficas.",
-  },
-  {
-    name: "Agapornis",
-    scientific: "Agapornis roseicollis",
-    price: "R$ 320",
-    image:
-      "https://images.unsplash.com/photo-1452570053594-1b985d6ea890?auto=format&fit=crop&w=900&q=80",
-    origin: "África",
-    size: "16 cm",
-    diet: "Sementes, frutas e vegetais",
-    description:
-      "Conhecido como 'pássaro do amor' pela forte ligação com o parceiro. Inteligente e brincalhão.",
-  },
-  {
-    name: "Trinca-ferro",
-    scientific: "Saltator similis",
-    price: "R$ 600",
-    image:
-      "https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=900&q=80",
-    origin: "Brasil",
-    size: "20 cm",
-    diet: "Frutas, sementes e insetos",
-    description:
-      "Ave nativa brasileira famosa pelo canto forte e variado. Criação com anilha e documentação IBAMA.",
+      "Dócil, sociável e fácil de domesticar. Aprende a assobiar músicas e imitar pequenos sons — ideal para quem está começando.",
   },
 ];
 
@@ -136,7 +108,7 @@ function Index() {
             </div>
             <div className="leading-tight">
               <p className="text-lg font-semibold">Ninho do Chico</p>
-              <p className="text-xs text-muted-foreground">Aves ornamentais</p>
+              <p className="text-xs text-muted-foreground">Ring Necks & Calopsitas</p>
             </div>
           </div>
           <nav className="hidden gap-6 text-sm text-muted-foreground md:flex">
@@ -165,8 +137,9 @@ function Index() {
               <span className="text-primary">companhia</span>.
             </h1>
             <p className="mt-5 max-w-lg text-base text-muted-foreground md:text-lg">
-              Conheça as aves ornamentais criadas com carinho no Ninho do Chico.
-              Cada ave é entregue saudável, anilhada e pronta para alegrar o seu lar.
+              Ring Necks nas cores verde, azul e amarelo e Calopsitas criadas com
+              carinho. Cada ave é entregue saudável, anilhada e pronta para alegrar
+              o seu lar.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#aves">
@@ -184,14 +157,14 @@ function Index() {
           <div className="relative">
             <div className="aspect-square overflow-hidden rounded-3xl border border-border shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1555169062-013468b47731?auto=format&fit=crop&w=1200&q=80"
-                alt="Ave colorida em galho"
+                src={ringNeckVerde}
+                alt="Ring Neck verde no galho"
                 className="h-full w-full object-cover"
               />
             </div>
             <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-border bg-card p-4 shadow-lg md:block">
               <p className="text-xs text-muted-foreground">Espécies disponíveis</p>
-              <p className="text-2xl font-bold text-primary">{birds.length}+</p>
+              <p className="text-2xl font-bold text-primary">{birds.length}</p>
             </div>
           </div>
         </div>
@@ -199,23 +172,21 @@ function Index() {
 
       {/* Birds */}
       <section id="aves" className="mx-auto max-w-6xl px-6 py-20">
-        <div className="mb-10 flex items-end justify-between">
-          <div>
-            <h2 className="text-3xl font-bold md:text-4xl">Nossas aves</h2>
-            <p className="mt-2 text-muted-foreground">
-              Clique em qualquer ave para ver detalhes e comprar.
-            </p>
-          </div>
+        <div className="mb-10">
+          <h2 className="text-3xl font-bold md:text-4xl">Nossas aves</h2>
+          <p className="mt-2 text-muted-foreground">
+            Clique em qualquer ave para ver detalhes e comprar.
+          </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {birds.map((bird) => (
             <button
               key={bird.name}
               onClick={() => setSelected(bird)}
               className="group overflow-hidden rounded-2xl border border-border bg-card text-left shadow-sm transition hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg"
             >
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="aspect-square overflow-hidden">
                 <img
                   src={bird.image}
                   alt={bird.name}
@@ -230,12 +201,9 @@ function Index() {
                       {bird.scientific}
                     </p>
                   </div>
-                  <span className="rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary">
-                    {bird.price}
-                  </span>
                 </div>
-                <p className="mt-3 line-clamp-2 text-sm text-muted-foreground">
-                  {bird.description}
+                <p className="mt-3 text-sm font-semibold text-primary">
+                  {bird.price}
                 </p>
               </div>
             </button>
@@ -248,17 +216,17 @@ function Index() {
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-2 md:items-center">
           <div className="aspect-video overflow-hidden rounded-3xl border border-border">
             <img
-              src="https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=1200&q=80"
-              alt="Aves no viveiro"
+              src={ringNeckAmarelo}
+              alt="Ring Neck amarelo"
               className="h-full w-full object-cover"
             />
           </div>
           <div>
             <h2 className="text-3xl font-bold md:text-4xl">Sobre o Ninho</h2>
             <p className="mt-4 text-muted-foreground">
-              O Ninho do Chico nasceu do amor pelas aves. Há mais de 15 anos
-              cuidamos da criação ética de espécies ornamentais, com viveiros
-              espaçosos, alimentação natural e acompanhamento veterinário.
+              O Ninho do Chico nasceu do amor pelas aves. Cuidamos da criação
+              ética com viveiros espaçosos, alimentação natural e acompanhamento
+              veterinário, para que cada ave chegue saudável e feliz na sua casa.
             </p>
             <ul className="mt-6 space-y-3 text-sm">
               <li className="flex items-center gap-3">
@@ -289,7 +257,7 @@ function Index() {
             </Button>
           </a>
           <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-            <Phone className="h-4 w-4" /> (11) 99999-9999
+            <Phone className="h-4 w-4" /> {WHATSAPP_DISPLAY}
           </span>
           <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
             <MapPin className="h-4 w-4" /> Interior de SP
@@ -306,10 +274,10 @@ function Index() {
 
       {/* Modal */}
       <Dialog open={!!selected} onOpenChange={(o) => !o && setSelected(null)}>
-        <DialogContent className="max-w-lg overflow-hidden p-0">
+        <DialogContent className="max-w-3xl overflow-hidden p-0">
           {selected && (
             <>
-              <div className="aspect-[16/10] w-full overflow-hidden">
+              <div className="aspect-[4/3] w-full overflow-hidden bg-muted sm:aspect-[16/10]">
                 <img
                   src={selected.image}
                   alt={selected.name}
@@ -328,11 +296,7 @@ function Index() {
                   {selected.description}
                 </p>
 
-                <dl className="mt-5 grid grid-cols-3 gap-3 text-sm">
-                  <div className="rounded-lg bg-secondary p-3">
-                    <dt className="text-xs text-muted-foreground">Origem</dt>
-                    <dd className="font-medium">{selected.origin}</dd>
-                  </div>
+                <dl className="mt-5 grid grid-cols-2 gap-3 text-sm">
                   <div className="rounded-lg bg-secondary p-3">
                     <dt className="text-xs text-muted-foreground">Tamanho</dt>
                     <dd className="font-medium">{selected.size}</dd>
